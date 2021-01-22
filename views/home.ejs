@@ -1,0 +1,8 @@
+<%- include('partials/header'); -%>
+    <h1 class="heading"><%= Head %> </h1>
+    <p><%= Description %> </p>
+    <% Posts.forEach(element => { %>
+        <h2 class="font-weight-bold"><%= element.title %></h2>
+        <p class="target" style="display: inline-block;"><%= element.description.substring(0,100) + ' ...' %> <a class="readMore" href="posts/<%= element.title %> " + <%= element.title %>>Read More</a></p>
+    <% }); %>
+<%- include('partials/footer'); -%> 
